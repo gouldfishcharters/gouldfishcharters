@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gould Fish Charters</title>
+
+<style>
+:root {
+  --brand: #007680;
+  --accent: #00b894;
+  --dark: #0b1220;
+  --text: #0f172a;
+  --bg: #f1f5f9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== HERO HEADER ===== */
+
+header {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("images/hero.jpg") center/cover no-repeat;
+}
+
+/* ===== NAVBAR ===== */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 26px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+
+.logo {
+  height: 90px;
+  border-radius: 16px;
+  padding: 6px;
+  background: rgba(255,255,255,.08);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #e2e8f0;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav a.cta {
+  background: var(--accent);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.kicker {
+  color: var(--accent);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 24px;
+  color: #e2e8f0;
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin: 6px;
+  text-decoration: none;
+}
+
+.btn.primary { background: var(--accent); color: white; }
+.btn.ghost { border: 2px solid white; color: white; }
+
+/* ===== SECTIONS ===== */
+
+section {
+  padding: 80px 5%;
+  background: white;
+}
+
+section:nth-of-type(even) {
+  background: #f1f5f9;
+}
+
+.section-title { font-size: 38px; margin-bottom: 10px; }
+.section-sub { color: #475569; margin-bottom: 36px; }
+
+/* ===== CARDS ===== */
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+.card img { height: 220px; object-fit: cover; width: 100%; }
+.card h3 { padding: 16px; }
+.card p { padding: 0 16px 20px; color: #475569; }
+
+/* ===== FEATURES ===== */
+
+.features {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.feature {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+}
+
+/* ===== GALLERY ===== */
+
+.gallery {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery img {
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ===== FAQ ===== */
+
+details {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: var(--dark);
+  color: #cbd5e1;
+  padding: 40px 5%;
+  text-align: center;
+}
+
+/* ===== MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+
+  header {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 18px 5%;
+  }
+
+  .brand {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 20px;
+  }
+
+  .logo {
+    height: 55px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .hero h1 { font-size: 34px; }
+  .hero p { font-size: 16px; }
+
+  .hero div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section { padding: 50px 5%; }
+  .section-title { font-size: 28px; }
+
+  .card img { height: 180px; }
+  .gallery img { height: 180px; }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="topbar">
+  <div class="brand">
+    <img class="logo" src="logo/logo.jpg" alt="">
+    Gould Fish Charters
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#trips">Trips</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="cta" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="hero">
+  <p class="kicker">USCG LICENSED • FAMILY FRIENDLY</p>
+  <h1>Hook Into an Unforgettable Day</h1>
+  <p>From calm inshore trips to offshore trophy hunts, Gould Fishing delivers safe, exciting charters with top-tier gear.</p>
+
+  <div>
+    <a class="btn primary" href="contact.html">Request Availability</a>
+    <a class="btn ghost" href="#gallery">View Catches</a>
+  </div>
+</div>
+
+</header>
+
+<section id="trips">
+<h2 class="section-title">Popular Trips</h2>
+<p class="section-sub">Choose your adventure</p>
+
+<div class="grid">
+
+<div class="card">
+  <img src="images/red1.JPG">
+  <h3>Island Taxi Service</h3>
+  <p>Scheduled drop off and pickup at nearby islands and sand bars.</p>
+</div>
+
+<div class="card">
+  <img src="images/bonita1.jpeg">
+  <h3>Nearshore Trolling</h3>
+  <p>Chasing spanish mackerel, king mackerel, and bonito.</p>
+</div>
+
+<div class="card">
+  <img src="images/dolphin.jpeg">
+  <h3>Scenic Boat Ride</h3>
+  <p>Explore Wrightsville, Figure 8, and Masonboro Island.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">What’s Included</h2>
+
+<div class="features">
+<div class="feature"><h4>Quality Gear</h4><p>All equipment provided.</p></div>
+<div class="feature"><h4>Safety First</h4><p>Licensed captain & USCG gear.</p></div>
+<div class="feature"><h4>Fish Cleaning</h4><p>We clean your catch.</p></div>
+<div class="feature"><h4>Local Knowledge</h4><p>We follow the bite.</p></div>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="section-title">Recent Photos</h2>
+
+<div class="gallery">
+<img src="images/bonita2.jpeg">
+<img src="images/red2.jpeg">
+<img src="images/dog.PNG">
+<img src="images/sunset1.jpeg">
+<img src="images/bonita3.jpeg">
+<img src="images/group.jpeg">
+</div>
+</section>
+
+<section id="faq">
+<h2 class="section-title">FAQ</h2>
+
+<details><summary>What should we bring?</summary><p>Sunscreen, snacks, drinks, towels, chairs.</p></details>
+<details><summary>Can kids come?</summary><p>Yes! Family-friendly trips available.</p></details>
+<details><summary>Bad weather?</summary><p>Trips are rescheduled or refunded.</p></details>
+
+</section>
+
+<footer>
+<p>© 2026 Gould Fishing — Licensed & Insured Coastal Charters</p>
+</footer>
+
+</body>
+</html>

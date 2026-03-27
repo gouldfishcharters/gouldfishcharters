@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact • Gould Fishing</title>
+
+<style>
+:root {
+  --brand: #007680;
+  --accent: #00b894;
+  --dark: #0b1220;
+  --text: #0f172a;
+  --bg: #f1f5f9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ===== HERO HEADER ===== */
+
+header {
+  min-height: 60vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("images/hero.jpg") center/cover no-repeat;
+}
+
+/* ===== BIG NAVBAR ===== */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 26px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  border-radius: 16px;
+  padding: 6px;
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #e2e8f0;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav a.cta {
+  background: var(--accent);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 18px;
+}
+
+/* ===== HERO TEXT ===== */
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.kicker {
+  color: var(--accent);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 68px);
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e2e8f0;
+  font-size: 20px;
+}
+
+/* ===== MAIN CONTENT ===== */
+
+main {
+  padding: 80px 5%;
+  background: white;
+}
+
+.section-title {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.section-sub {
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+/* ===== FORM ===== */
+
+form {
+  display: grid;
+  gap: 18px;
+  max-width: 900px;
+}
+
+label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+}
+
+textarea { resize: vertical; }
+
+input[type="submit"] {
+  background: var(--accent);
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 999px;
+  font-size: 18px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: var(--dark);
+  color: #cbd5e1;
+  padding: 40px 5%;
+  text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="topbar">
+  <div class="brand">
+    <img class="logo" src="logo/logo.jpg" alt="Gould Fishing Logo">
+    Gould Fishing
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html#trips">Trips</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a class="cta" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="hero">
+  <p class="kicker">PLAN YOUR TRIP</p>
+  <h1>Contact & Availability</h1>
+  <p>Send a message and we’ll respond with available dates and details.</p>
+</div>
+
+</header>
+
+<main>
+
+<h2 class="section-title">Send a Message</h2>
+<p class="section-sub">Prefer a call? Include your phone number below.</p>
+
+<form action="https://formsubmit.co/tyman3535@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://whitleyty.github.io/index.html/">
+
+<label>Name</label> <input type="text" name="Name" required placeholder="First & Last Name">
+
+<label>Email</label> <input type="email" name="Email" required placeholder="you@example.com">
+
+<label>Phone (optional)</label> <input type="tel" name="Phone" placeholder="(555) 555-5555">
+
+<label>Party Size</label> <select name="Party Size" required>
+
+<option value="" disabled selected>Select...</option>
+<option>1</option><option>2</option><option>3</option>
+<option>4</option><option>5</option><option>6</option>
+</select>
+
+<label>Trip type</label> <select name="Trip Type" required>
+
+<option value="" disabled selected>Select...</option>
+<option>Inshore</option>
+<option>Nearshore</option>
+<option>Scenic Boat Ride</option>
+<option>Custom</option>
+</select>
+
+<label>Preferred date</label> <input type="date" name="Preferred Date" required>
+
+<label>Message</label>
+
+<textarea name="Message" rows="6" required placeholder="Tell us what you’re hoping to catch or any questions..."></textarea>
+
+<input type="submit" value="Send Request">
+
+</form>
+
+</main>
+
+<footer>
+<p>© 2026 Gould Fishing — Licensed & Insured Coastal Charters</p>
+</footer>
+
+</body>
+</html>
